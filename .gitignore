@@ -1,0 +1,16 @@
+*.log
+*.aux
+*.bbl
+*.snm
+*.lof
+*.run.xml
+*.toc
+*.blg
+*.lot
+*.out
+*.mtc*
+*.maf
+*.fdb*
+*.lof
+*.fls
+*.synctex.gz
