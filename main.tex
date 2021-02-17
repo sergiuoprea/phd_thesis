@@ -26,6 +26,34 @@
   %parskip,       % Uncomment to add space between paragraphs
 ]{UAThesis} % The class file specifying the document structure
 
+%Cool numbers
+%\usepackage{siunitx}
+
+%Cool tables
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage{longtable}
+\usepackage{pdflscape}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\0}{\mathord{\mspace{2mu}\star\mspace{2mu}}}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\renewcommand{\tabcolsep}{5pt}
+\newcommand{\xmark}{\ding{55}}
+
+%Video Prediction taxonomy
+\colorlet{linecol}{black!80}
+\tikzset{
+	my rounded corners/.append style={rounded corners=1pt},
+}
+
+\usepackage[caption=false]{subfig}
+
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
@@ -122,6 +150,7 @@
 
 % Include the chapters of the thesis as separate files from the Mainmatter folder
 \input{Mainmatter/chapter_introduction}
+\input{Mainmatter/chapter_videoprediction}
 \input{Mainmatter/chapter_conclusion}
 
 %----------------------------------------------------------------------------------------

@@ -1,0 +1,74 @@
+\begin{tikzpicture}[]
+	\tikzset{box/.style={black, draw=black, fill=none, very thick, minimum height=4 em, minimum width=16 em}}
+
+	\foreach \k in {0,...,3}
+	{
+		\foreach \i in {0,...,4}
+		{
+			\foreach \j in {0,...,4}
+			{
+				\node[box, fill=gray!50, draw=gray!50, minimum height=1 em, minimum width=1 em] (l1-\i-\j-\k) at (\i em + 0.75 em * \k em, \j em) {};
+			}
+		}
+	}
+
+	\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at (l1-2-2-0){};
+	%\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.25em, xshift=0.25em]l1-2-2-1){};
+	%\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.4em, xshift=0.4em]l1-2-2-2){};
+	%\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.6em, xshift=0.6em]l1-2-2-3){};
+	
+	\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.4em, xshift=0.4em]l1-2-2-1){};
+	\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.8em, xshift=0.8em]l1-2-2-2){};
+	\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=1.2em, xshift=1.2em]l1-2-2-3){};
+
+	\foreach \k in {0,...,3}
+	{
+		\foreach \i in {0,...,4}
+		{
+			\foreach \j in {0,...,4}
+			{
+				\node[box, fill=gray!50, draw=gray!50, minimum height=1 em, minimum width=1 em] (l2-\i-\j-\k) at (\i em + 0.75 em * \k em, \j em - 6 em) {};
+			}
+		}
+	}
+
+	\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at (l2-2-2-0){};
+
+	%\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.25em, xshift=0.25em]l1-2-2-1){};
+
+	%\node[box, fill=black, draw=black, minimum height=1 em, minimum width=1 em] at ([yshift=0.4em, xshift=0.4em]l1-2-2-2){};
+
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.4em, xshift=0em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.4em, xshift=0em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.4em, xshift=0.4em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=0.4em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.4em, xshift=0.4em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.4em, xshift=-0.4em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=-0.4em]l2-2-2-1){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.4em, xshift=-0.4em]l2-2-2-1){};
+
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.8em, xshift=0em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.8em, xshift=0em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.8em, xshift=0.8em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=0.8em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.8em, xshift=0.8em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-0.8em, xshift=-0.8em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=-0.8em]l2-2-2-2){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0.8em, xshift=-0.8em]l2-2-2-2){};
+
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-1.2em, xshift=0em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=1.2em, xshift=0em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-1.2em, xshift=1.2em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=1.2em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=1.2em, xshift=1.2em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=-1.2em, xshift=-1.2em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=0em, xshift=-1.2em]l2-2-2-3){};
+	\node[box, fill=black, draw=none, minimum height=1 em, minimum width=1 em, opacity=0.25] at ([yshift=1.2em, xshift=-1.2em]l2-2-2-3){};
+
+	\node at ([yshift=1.75 em, xshift=-1.75 em]l1-4-4-0) { Context Frame};
+	\draw[-latex, very thick] ([yshift=1.25 em, xshift=3 em]l1-4-4-0.north) -- node [yshift=0.75 em]{Time}([yshift=1.25 em]l1-4-4-3.north);
+
+	\node[rotate=90] at ([yshift=-2 em, xshift=-6 em]l1-4-4-0.center) {Deterministic};
+	\node[rotate=90] at ([yshift=-2 em, xshift=-6 em]l2-4-4-0.center) {Probabilistic};
+
+\end{tikzpicture}

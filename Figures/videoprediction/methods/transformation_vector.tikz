@@ -1,0 +1,39 @@
+﻿\begin{tikzpicture}[]
+	\tikzset{box/.style={black, draw=black, fill=none, very thick, minimum height=4 em, minimum width=16 em}}
+
+	\foreach \k in {0,...,1}
+	{
+		\foreach \i in {0,...,6}
+		{
+			\foreach \j in {0,...,6}
+			{
+				\node[box, fill=none, draw=gray!50, minimum height=1 em, minimum width=1 em] (l1-\i-\j-\k) at (\i em + 0.9 em * \k em, \j em) {};
+			}
+		}
+	}
+
+	\node at ([yshift=1.5 em]l1-3-6-0) {\Large $I_t$};
+	\node at ([yshift=1.5 em]l1-3-6-1) {\Large $I_{t+1}$};
+	\node at ([yshift=-2 em, xshift=-1.25 em]l1-0-0-1) {$I_{t+1}(x, y) = f(I_t(x + u, y + v))$};
+	\node[shape=circle, inner sep=0.1 em, fill=black] at (l1-2-4-0) {};
+	\node[shape=circle, inner sep=0.1 em, fill=black] at (l1-3-3-1) {};
+
+	\draw[-latex, very thick] (l1-3-3-1.center) node[yshift=-1 em]{$(x,y)$} -- (l1-2-4-0.center) node[yshift=1 em]{$(x+u, y+v)$};
+
+%	\node at ([yshift=1.5 em]l1-3-6-2) {\Large $I_t$};
+%	\node at ([yshift=1.5 em]l1-3-6-3) {\Large $I_{t+1}$};
+
+%	\node[shape=circle, inner sep=0.1 em, fill=black] at (l1-3-3-2) {};
+
+%	\node[shape=circle, inner sep=0.1 em, fill=black] at (l1-3-3-3) {};
+%	\node at ([yshift=-1 em]l1-3-3-2) {$(x, y)$};
+
+%	\node at ([yshift=-1 em]l1-3-3-3) {$(x, y)$};
+
+%	\node[draw=black, minimum height=3 em, minimum width=3 em, thick] at (l1-3-3-2) {};
+
+%	\node at ([yshift=-2 em, xshift=-1.25 em]l1-0-0-3) {$I_{t+1}(x, y) = K(x,y) * P(x,y)$};
+%	\node at ([yshift=-0.5 em]l1-3-1-2) {$P(x, y)$};
+
+
+\end{tikzpicture}

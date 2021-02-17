@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\node[inner sep=0.8pt, draw=blue!70, line width=0.05cm] (frame0) at (0,0)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/0.jpg}};
+\node[inner sep=0.8pt, draw=blue!70, line width=0.05cm] (frame1) at (0.25,0.25)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/0.jpg}};
+\node[inner sep=0.8pt, draw=blue!70, line width=0.05cm] (frame2) at (0.5,0.5)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/0.jpg}};
+ \node[inner sep=0.8pt, draw=blue!70, line width=0.05cm] (frame3) at (0.75,0.75)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/0.jpg}};
+ \node[inner sep=0.8pt, draw=green!80, line width=0.05cm] (frame4) at (6.5,0.75)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/1_mask.jpg}};
+\node[inner sep=0.8pt, draw=green!80, line width=0.05cm] (frame5) at (12.2,0.75)
+    	{\includegraphics[trim={17cm 7cm 5cm 3cm},clip,width=.25\textwidth]{figures/videoprediction/intro/2_mask.jpg}};
+%\node[inner sep=0.8pt, draw=green!80, line width=0.05cm] (frame5) at (11,0.75)
+%    	{\includegraphics[trim={9.5cm 2.8cm 5.5cm 2.5cm},clip,width=.25\textwidth]{figures/introduction/3_mask.jpg}};
+\node at (0.4,-3.0) {\LARGE $\mathbf{(X_{t-n}, \ldots, X_{t})}$};
+\node at (0.4,3.65) {\LARGE Context Frames};
+\node at (6.5,-3.0) {\LARGE $\mathbf{\hat{Y}_{t+1}}$};
+\node at (9.5,3.65) {\LARGE Predicted Frames};
+\node at (12.2,-3.0) {\LARGE $\mathbf{\hat{Y}_{t+m}}$};
+\draw [->,shorten >= 3pt, shorten <= 3pt,line width= 0.5mm] (frame3) -- (frame4);
+\path (frame4) -- node[auto=false]{\Huge \ldots} (frame5);
+%\draw [->,shorten >= 3pt, shorten <= 3pt,line width= 0.5mm] (frame4) -- (frame5);
+%\draw[<->,thick] (russell.south east) -- (whitehead.north west)
+%    node[midway,fill=white] {Principia Mathematica};
+\end{tikzpicture}

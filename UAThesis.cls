@@ -167,25 +167,20 @@
 \usepackage{graphicx} % Required to include images
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
 
-\usepackage{booktabs} % Required for better table rules
+%\usepackage{booktabs} % Required for better table rules
 \usepackage{colortbl}
 
 \RequirePackage[labelfont=bf]{caption} % Required for customising the captions
 %\setlength{\captionmargin}{10pt}
-\usepackage{subcaption}
+%\usepackage{subcaption}
 \captionsetup{font={normalsize,stretch=1.16}}
 
 \usepackage{amsmath}
 \usepackage{colortbl}
-\usepackage{pgfplots}
-\usepackage{pgfplotstable}
-\usepackage{tabularx}
 
 \usepackage{amssymb}% http://ctan.org/pkg/amssymb
 \usepackage{pifont}% http://ctan.org/pkg/pifont
 \newcommand{\cmark}{\ding{51}}
-\newcommand{\xmark}{\ding{55}}
-\usepackage{booktabs}
 
 \RequirePackage{xcolor}
 
@@ -275,7 +270,7 @@
     }
 }
 
-\usepackage{forest}
+\usepackage[edges]{forest}
 \usepackage[hyphens]{url}
 \usepackage{xspace}
 \newcommand{\TikZ}{Ti\emph{k}Z\xspace}
@@ -297,10 +292,8 @@
 \usepackage[backend=bibtex,natbib=true,style=ieee]{biblatex}
 % User the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{personal.bib}
-\addbibresource{objrecog.bib}
-\addbibresource{sim2real.bib}
-\addbibresource{segmentation.bib}
-\addbibresource{tactile.bib}
+\addbibresource{videoprediction.bib}
+
 % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes}
 % Required to generate language-dependent quotes in the bibliography
