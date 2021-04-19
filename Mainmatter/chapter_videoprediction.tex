@@ -364,7 +364,7 @@ Initial video prediction models attempted to directly predict future pixel inten
 
 \begin{figure}[!tbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Figures/videoprediction/methods/e3d_lstm.png}
+	\includegraphics[width=0.5\textwidth]{figures/videoprediction/methods/e3d_lstm.png}
 	\caption{Representation of the 3D encoder-decoder architecture of \ac{E3DLSTM} \cite{Wang2019b}. After reducing $T$ consecutive input frames to high-dimensional feature maps, these are directly fed into a novel \textit{eidetic} module for modeling long-term spatiotemporal dependencies. Finally, stacked 3D \ac{CNN} decoder outputs the predicted video frames. For classification tasks the hidden states can be directly used as the learned video representation. Figure extracted from~\cite{Wang2019b}.}
 	\label{fig:e3d_lstm}
 \end{figure}
@@ -386,10 +386,10 @@ where $f$ is a bilinear interpolator such as \cite{Memisevic2010,Memisevic2011,L
 \begin{figure}[!t]
 	\centering
 	\subfloat[]{
-		\resizebox{0.47\textwidth}{!}{\input{Figures/videoprediction/methods/transformation_vector.tikz}}
+		\resizebox{0.47\textwidth}{!}{\input{figures/videoprediction/methods/transformation_vector.tikz}}
 		\label{subfig:resampling_vector}}
 	\subfloat[]{
-		\resizebox{0.47\textwidth}{!}{\input{Figures/videoprediction/methods/transformation_kernel.tikz}}
+		\resizebox{0.47\textwidth}{!}{\input{figures/videoprediction/methods/transformation_kernel.tikz}}
 		\label{subfig:resampling_kernel}}
 	\caption{Representation of transformation-based approaches. (a) Vector-based with a bilinear interpolation. (b) Kernel-based applying transformations as a convolutional operation. Figure inspired by \cite{Reda2018}.}
 	\label{fig:resampling}
@@ -406,7 +406,7 @@ Combining kernel and vector-based resampling into a hybrid solution, Reda \texti
 Bilinear models use multiplicative interactions to extract transformations from pairs of observations in order to relate images, such as \acp{GAE}~\cite{Memisevic2013a}. Inspired by these models, Michalski \textit{et al.} proposed the \ac{PGP}~\cite{Michalski2014} consisting of a recurrent pyramid of stacked \acp{GAE}. To the best of our knowledge, this was the first attempt to predict future frames in the affine transform space. Multiple \acp{GAE} are stacked to represent a hierarchy of transformations and capture higher-order dependencies. From the experiments on predicting frequency modulated sin-waves, authors stated that standard \acp{RNN} were outperformed in terms of accuracy. However, no performance comparison was conducted on videos. 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Figures/videoprediction/methods/spatial_transformer.png}
+	\includegraphics[width=0.8\textwidth]{figures/videoprediction/methods/spatial_transformer.png}
 	\caption{A representation of the spatial transformer module proposed by \cite{Jaderberg2015}. First, the localization network regresses the transformation parameters, denoted as $\theta$, from the input feature map $U$. Then, the grid generator creates a sampling grid from the predicted transformation parameters. Finally, the sampler produces the output map by sampling the input at the points defined in the sampling grid. Figure extracted from~\cite{Jaderberg2015}.}
 	\label{fig:spatial_transformer}
 \end{figure}
@@ -426,7 +426,7 @@ Drawing inspiration from two-stream architectures for action recognition \cite{S
 \begin{figure}[!tbp]
 	\centering
 	%\resizebox{\linewidth}{!}{
-	\includegraphics[width=0.6\textwidth]{Figures/videoprediction/methods/mcnet.png}
+	\includegraphics[width=0.6\textwidth]{figures/videoprediction/methods/mcnet.png}
 	\caption{\acf{MCNET} with Multi-scale Motion-Content Residuals. While the motion encoder captures the temporal dynamics in a sequence of image differences, the content encoder extracts meaningful spatial features from the last observed RGB frame. After that, the network computes motion-content features that are fed into the decoder to predict the next frame. Figure extracted from \cite{Villegas2017a}.}
 	\label{fig:mcnet}
 \end{figure}
@@ -453,7 +453,7 @@ However, high-level prediction spaces are more tractable and constitute good int
 By decomposing the visual scene into semantic entities, such as pedestrians, vehicles and obstacles, the output space is narrowed to high-level scene properties. This intermediate representation represents a more tractable space as pixel values of a semantic map are categorical. In other words, scene dynamics are modeled at the semantic entity level. This has encouraged authors to (1) leverage future prediction to improve parsing results~\cite{Jin2017} and (2) directly predict segmentation maps into the future~\cite{Luc2017, Luc2018, Luc2019}.
 \begin{figure*}[tbp]
 	\centering
-	\includegraphics[width=\textwidth]{Figures/videoprediction/methods/student_teacher.png}
+	\includegraphics[width=\textwidth]{figures/videoprediction/methods/student_teacher.png}
 	\caption{Two-staged method proposed by Chiu \textit{et al.} \cite{Chiu2019}. In the upper half, the student network consists on an \ac{ED}-based architecture featuring a 3D convolutional forecasting module. It performs the forecasting task guided by an additional loss generated by the teacher network (represented in the lower half). Figure extracted from \cite{Chiu2019}.}
 	\label{fig:student_teacher}
 \end{figure*}
