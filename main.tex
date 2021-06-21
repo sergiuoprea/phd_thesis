@@ -52,9 +52,19 @@
 	my rounded corners/.append style={rounded corners=1pt},
 }
 
-\usepackage[caption=false]{subfig}
-
 \usepackage{textcomp}
+
+%Subfigures and solving the problem of too large counter. labels after z: aa, ab...
+\usepackage[caption=false]{subfig}
+\usepackage{alphalph}
+\renewcommand*{\thesubfigure}{%
+	\alphalph{\value{subfigure}}%
+}%
+
+% Colors for unrealgrasp
+\definecolor{azure}{rgb}{0.0, 0.5, 1.0}
+\definecolor{red}{rgb}{0.93, 0.11, 0.14}
+\definecolor{green}{rgb}{0.18, 0.55, 0.34}
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
@@ -152,8 +162,9 @@
 
 % Include the chapters of the thesis as separate files from the Mainmatter folder
 \input{mainmatter/chapter_introduction}
-\input{mainmatter/chapter_videoprediction}
+\input{mainmatter/chapter_unrealgrasp}
 \input{mainmatter/chapter_synthtoreal}
+\input{mainmatter/chapter_videoprediction}
 \input{mainmatter/chapter_conclusion}
 
 %----------------------------------------------------------------------------------------
