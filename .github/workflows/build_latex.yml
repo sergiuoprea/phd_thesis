@@ -11,11 +11,9 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/texlive-action/small@v1
         with:
-          root_file: main.tex
-          args: "-bibtex -f -pdf -cd -diagnostics" 
-          latexmk_use_xelatex: true
+          run: compile.sh
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
