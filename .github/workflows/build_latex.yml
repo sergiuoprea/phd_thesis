@@ -14,7 +14,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-          args: "-bibtex"
+          args: "-bibtex -f -pdf -cd -diagnostics" 
           latexmk_use_xelatex: true
       - name: Upload PDF
         uses: actions/upload-artifact@v2
