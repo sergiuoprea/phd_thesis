@@ -13,7 +13,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/texlive-action/small@v1
         with:
-          run: compile.sh
+          run: ./compile.sh
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
